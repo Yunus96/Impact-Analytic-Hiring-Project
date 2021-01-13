@@ -5,7 +5,7 @@ const CandidateSearch = ({searchText}) => {
 
     const onSubmit =(e) =>{
         e.preventDefault();
-        searchText(text)
+        searchText(text);
     }
 
     return (

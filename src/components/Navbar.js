@@ -4,8 +4,14 @@ import SearchIcon from '@material-ui/icons/Search';
 
 import '../app.css';
 
-function Navbar() {
+function Navbar({searchText}) {
     const [showLinks, setShowLinks] = useState(false);
+    const [text, setText] = useState('');
+
+    const onSubmit =(e) =>{
+        e.preventDefault();
+        searchText(text);
+    }
 
     return (
         <div className='Navbar'>
@@ -18,8 +24,8 @@ function Navbar() {
                 <button onClick={()=>setShowLinks(!showLinks)}><ReorderIcon /></button>
             </div>
             <div className='rightSide'>
-                <input type="text" placeholder="Search..." />
-                <button><SearchIcon /></button>
+                <input type="text" placeholder="Search..." onChange={e => setText(e.target.value)}/>
+                <button onClick={onSubmit}><SearchIcon /></button>
             </div>
         </div>
     )

@@ -10,6 +10,7 @@ const CandidateCard = ({image }) => {
               Candidate Name : {image.user}
             </div>
             */}
+           
         <ul>
           <li>
             <strong>Candidate Name : </strong>{image.name}
