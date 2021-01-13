@@ -1,5 +1,8 @@
 # Impact Analytic Hiring Project
 
+## Things I Learn't While Doing This Project
+ * Responsive navbar
+
 ## Things ToDo
 
   #### Entry Level
