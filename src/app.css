@@ -1,0 +1,97 @@
+button:hover{
+    cursor: pointer;
+}
+.Navbar{
+    background-color: #021E39;
+    width: 100%;
+    height: 70px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    margin-bottom: 0;
+}
+.Navbar .leftSide {
+    flex: 50%;
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    margin-left: 20px;
+}
+.Navbar .leftSide .links{
+    max-height: 70px;
+}
+.Navbar .leftSide .links a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin-left: 15px;
+}
+.Navbar .leftSide button{
+    display: none;
+    margin-left: 20px;
+    background-color: white;
+    padding: 5px 20px;
+    border-radius: 4px;
+}
+.Navbar .leftSide #hidden{
+    display: flex;
+ }
+.Navbar .rightSide {
+    flex: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 40px;
+}
+.rightSide input{
+    width: 220px;
+    height: 30px;
+    border: none;
+    border-radius: 4px;
+    font-size: 20px;
+    padding-left: 15px;
+    color: black;
+}
+.rightSide button{
+    width: 70px;
+    height: 32px;
+    background-color: white;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-left: 3px;
+}
+@media only screen and (max-width: 850px){
+    .Navbar .leftSide .links a{
+        font-size : 20px;
+    }    
+}
+@media only screen and (max-width: 750px){
+    .Navbar .leftSide .links a{
+        font-size : 15px;
+    }    
+}
+@media only screen and (max-width: 650px){
+    .Navbar .leftSide button{
+        display: flex;
+        
+    }
+    .Navbar .leftSide .links{
+        display: none;
+    }
+    .Navbar .leftSide #hidden{
+        margin-top: 0;
+        position: absolute;
+        left: 0;
+        top: 60px;
+        height: 230px;
+        max-height: 150px;
+        width: 100%;
+        background-color: #021E39;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }       
+    .Navbar .leftSide #hidden a{
+        margin: 10px;
+        font-size: 15px;
+    }     
+}

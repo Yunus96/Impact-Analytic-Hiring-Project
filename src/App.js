@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import CandidateCard from './components/CandidateCard';
 import CandidateSearch from './components/CandidateSearch';
+import Navbar from './components/Navbar';
+
+import './app.css';
 
 
 
@@ -10,25 +13,27 @@ function App() {
   const [ term, setTerm ] = useState('');
 
   useEffect(() => {
-    fetch(`https://pixabay.com/api/?key=${process.env.REACT_APP_PIXABAY_API_KEY}&q=${term}&image_type=photo&pretty=true`)
+    fetch(`https://s3-ap-southeast-1.amazonaws.com/he-public-data/users49b8675.json`)
         .then(res => res.json())
         .then(data => {
-          setImages(data.hits)
+          console.log(data)
+          setImages(data)
           setIsLoading(false)
         })
         .catch(err => console.log(err))
   }, [term])
 
   return (
-    <div className="container mx-auto">
+    <div className="containe mx-auto">
+      <Navbar />
       <CandidateSearch searchText={(text)=>setTerm(text)} />
       
       {!isLoading && images.length === 0 && <h1 className="text-6xl text-center mx-auto mt-32">404! Not found</h1>}
 
       { isLoading ? <h1 className="text-6xl text-center mx-auto mt-32">Loading...</h1> :
-        <div className="grid grid-cols-3 gap-4">
-          {images.map(image =>(
-            <CandidateCard key={image.id} image={image} />
+        <div className="mx-10 grid grid-cols-3 gap-6">
+          {images.map((image, index) =>(
+            <CandidateCard key={index} image={image} />
           ))}
       </div>
       }
