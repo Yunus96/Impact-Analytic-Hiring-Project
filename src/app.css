@@ -59,6 +59,57 @@ button:hover{
     font-size: 16px;
     margin-left: 3px;
 }
+.detail{
+    display: flex;
+    background-color:white;
+    width: auto;
+    height: 75vh;
+    margin: 40px 90px;
+    font: Arial, Helvetica, sans-serif;
+}
+.detail .leftSide{
+    flex: 50%;
+    width: auto;
+    height: 75vh;
+}
+.leftSide img{
+    padding: 20px 50px;
+    border-radius: 60px;
+    height: 80vh;
+}
+.detail .rightSide{
+    flex: 50%;
+    text-align: left;
+}
+.rightSide .rightSideIn{
+    padding: 30px 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+}
+.rightSideIn h1{
+    font-weight: bolder;
+    font-size: xx-large;
+    margin-bottom: 10px;
+}
+.rightSideIn ul{
+    margin-top: 10px;
+}
+li{
+    margin: 10px 6px;
+}
+button{
+    margin: 20px;
+    width: 650px;
+}
+.rightSideIn .shortlist{
+    background-color: green;
+    color: white;
+}
+.rightSideIn .reject{
+    background-color:red;
+    color: white;
+}
+
 @media only screen and (max-width: 850px){
     .Navbar .leftSide .links a{
         font-size : 20px;

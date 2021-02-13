@@ -1,8 +1,10 @@
 import React, {useState} from 'react';
 import ReorderIcon from '@material-ui/icons/Reorder';
 import SearchIcon from '@material-ui/icons/Search';
+import { Link } from 'react-router-dom';
 
 import '../app.css';
+
 
 function Navbar({searchText}) {
     const [showLinks, setShowLinks] = useState(false);
@@ -17,9 +19,9 @@ function Navbar({searchText}) {
         <div className='Navbar'>
             <div className='leftSide'>
                 <div className="links" id={showLinks ? 'hidden': ''}>
-                    <a href="/">HR - Portal</a>
-                    <a href="/shortlist">Shortlist</a>
-                    <a href="/rejected">Rejected</a>
+                    <Link exact to="/">HR - Portal</Link>
+                    <Link exact to="/shortlisted">Shortlist</Link>
+                    <Link exact to="/rejected">Rejected</Link>
                 </div>
                 <button onClick={()=>setShowLinks(!showLinks)}><ReorderIcon /></button>
             </div>
@@ -27,7 +29,7 @@ function Navbar({searchText}) {
                 <input type="text" placeholder="Search..." onChange={e => setText(e.target.value)}/>
                 <button onClick={onSubmit}><SearchIcon /></button>
             </div>
-        </div>
+        </div>        
     )
 }
 
