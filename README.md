@@ -5,9 +5,6 @@
 
 ## Things ToDo
 
-  #### Entry Level
-
-    1. implement search by name.
  
   #### Intermediate Level
     1. A feature to click on a Candidate to open a new page showing the details of the Candidate along with the given image and a Shortlist and a Reject Button. Page URL must be          of the format “/:id” where id is the id of the Candidate. Clicking Shortlist/Reject must take appropriate action and take us back to the Home Page.
