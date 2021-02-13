@@ -7,9 +7,9 @@
 
  
   #### Intermediate Level
-    1. A feature to click on a Candidate to open a new page showing the details of the Candidate along with the given image and a Shortlist and a Reject Button. Page URL must be          of the format “/:id” where id is the id of the Candidate. Clicking Shortlist/Reject must take appropriate action and take us back to the Home Page.
+    1.  Clicking Shortlist/Reject must take appropriate action and take us back to the Home Page.
     
-    2. Shortlisted and Rejected buttons should be available in the Home Page. Clicking it must list all the Shortlisted and Rejected candidates appropriately in “/shortlisted” &          “/rejected” route.
+    2. Shortlisted and Rejected buttons should be available in the Home Page. Clicking it must list all the Shortlisted and Rejected candidates appropriately in         “/shortlisted” & “/rejected” route.
     
     3. Deploy your Frontend App on any Static Website Hosting Service.
        (This deployment link must be active for at least 2 weeks from Submission Date.)
